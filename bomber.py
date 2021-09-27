@@ -89,11 +89,11 @@ def format_phone(num):
 def do_zip_update():
     success = False
     if DEBUG_MODE:
-        zip_url = "https://github.com/TheSpeedX/TBomb/archive/dev.zip"
-        dir_name = "TBomb-dev"
+        zip_url = "https://github.com/Jaikant00/SpamX/archive/dev.zip"
+        dir_name = "SpamX-dev"
     else:
-        zip_url = "https://github.com/TheSpeedX/TBomb/archive/master.zip"
-        dir_name = "TBomb-master"
+        zip_url = "https://github.com/Jaikant00/SpamX/archive/master.zip"
+        dir_name = "SpamX-master"
     print(ALL_COLORS[0]+"Downloading ZIP ... "+RESET_ALL)
     response = requests.get(zip_url)
     if response.status_code == 200:
@@ -119,9 +119,9 @@ def do_zip_update():
         mesgdcrt.GeneralMessage(
             "Please run the script again to load the latest version")
     else:
-        mesgdcrt.FailureMessage("Unable to update TBomb.")
+        mesgdcrt.FailureMessage("Unable to update SpamX.")
         mesgdcrt.WarningMessage(
-            "Grab The Latest one From https://github.com/TheSpeedX/TBomb.git")
+            "Grab The Latest one From https://github.com/Jaikant00/SpamX.git")
 
     sys.exit()
 
@@ -146,16 +146,16 @@ def do_git_update():
     print("\n")
 
     if success:
-        mesgdcrt.SuccessMessage("TBomb was updated to the latest version")
+        mesgdcrt.SuccessMessage("SpamX was updated to the latest version")
         mesgdcrt.GeneralMessage(
             "Please run the script again to load the latest version")
     else:
-        mesgdcrt.FailureMessage("Unable to update TBomb.")
+        mesgdcrt.FailureMessage("Unable to update SpamX.")
         mesgdcrt.WarningMessage("Make Sure To Install 'git' ")
         mesgdcrt.GeneralMessage("Then run command:")
         print(
             "git checkout . && "
-            "git pull https://github.com/TheSpeedX/TBomb.git HEAD")
+            "git pull https://github.com/Jaikant00/SpamX.git HEAD")
     sys.exit()
 
 
@@ -173,23 +173,23 @@ def check_for_updates():
         return
     mesgdcrt.SectionMessage("Checking for updates")
     fver = requests.get(
-        "https://raw.githubusercontent.com/TheSpeedX/TBomb/master/.version"
+        "https://raw.githubusercontent.com/Jaikant00/SpamX/master/.version"
     ).text.strip()
     if fver != __VERSION__:
         mesgdcrt.WarningMessage("An update is available")
         mesgdcrt.GeneralMessage("Starting update...")
         update()
     else:
-        mesgdcrt.SuccessMessage("TBomb is up-to-date")
-        mesgdcrt.GeneralMessage("Starting TBomb")
+        mesgdcrt.SuccessMessage("SpamX is up-to-date")
+        mesgdcrt.GeneralMessage("Starting SpamX")
 
 
 def notifyen():
     try:
         if DEBUG_MODE:
-            url = "https://github.com/TheSpeedX/TBomb/raw/dev/.notify"
+            url = "https://github.com/Jaikant00/SpamX/raw/dev/.notify"
         else:
-            url = "https://github.com/TheSpeedX/TBomb/raw/master/.notify"
+            url = "https://github.com/Jaikant00/SpamX/raw/master/.notify"
         noti = requests.get(url).text.upper()
         if len(noti) > 10:
             mesgdcrt.SectionMessage("NOTIFICATION: " + noti)
@@ -390,25 +390,25 @@ TBomb can be used for many purposes which incudes -
 \t Friendly Spamming
 \t Testing Your Spam Detector and more ....
 
-TBomb is not intented for malicious uses.
+SpamX is not intented for malicious uses.
 """
 
 parser = argparse.ArgumentParser(description=description,
-                                 epilog='Coded by SpeedX !!!')
+                                 epilog='Coded by Jaikant00 !!!')
 parser.add_argument("-sms", "--sms", action="store_true",
-                    help="start TBomb with SMS Bomb mode")
+                    help="start SpamX with SMS Bomb mode")
 parser.add_argument("-call", "--call", action="store_true",
-                    help="start TBomb with CALL Bomb mode")
+                    help="start SpamX with CALL Bomb mode")
 parser.add_argument("-mail", "--mail", action="store_true",
-                    help="start TBomb with MAIL Bomb mode")
+                    help="start SpamX with MAIL Bomb mode")
 parser.add_argument("-ascii", "--ascii", action="store_true",
                     help="show only characters of standard ASCII set")
 parser.add_argument("-u", "--update", action="store_true",
-                    help="update TBomb")
+                    help="update SpamX")
 parser.add_argument("-c", "--contributors", action="store_true",
-                    help="show current TBomb contributors")
+                    help="show current SpamX contributors")
 parser.add_argument("-v", "--version", action="store_true",
-                    help="show current TBomb version")
+                    help="show current SpamX version")
 
 
 if __name__ == "__main__":
@@ -441,7 +441,7 @@ if __name__ == "__main__":
                 bann_text()
                 print("Available Options:\n")
                 for key, value in avail_choice.items():
-                    print("[ {key} ] {value} BOMB".format(key=key,
+                    print("[ {key} ] {value} SPAMX".format(key=key,
                                                           value=value))
                 print()
                 choice = input(mesgdcrt.CommandMessage("Enter Choice : "))
