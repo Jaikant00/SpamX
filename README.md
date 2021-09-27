@@ -1,8 +1,8 @@
 <h1 align="center">
   <br>
-  <a href="https://github.com/TheSpeedX/TBomb"><img src="https://i.ibb.co/F4HBKqm/TBomb.png" alt="TBomb"></a>
+  <a href="https://github.com/Jaikant00/SpamX"><img src="https://i.ibb.co/F4HBKqm/TBomb.png" alt="TBomb"></a>
   <br>
-  TBomb v2.1b
+  SpamX v2.1b
   <br>
 </h1>
 
@@ -71,7 +71,7 @@ tbomb
 
 Git installation methods are not universal and are likely to differ between distributions so installing Git as per the given instructions below may not work. Please check out how to install Git for your Linux distribution [here](https://git-scm.com/). Commands below provide instructions for Debian-based systems.
 
->Running `TBomb.sh` as sudo miscofigures files ownership. It is recommended not to run it as sudo
+>Running `SpamX.sh` as sudo miscofigures files ownership. It is recommended not to run it as sudo
 
 Run these commands to clone and run TBomb.
 
@@ -81,9 +81,9 @@ To use the bomber type the following commands in Termux:
 ```shell script
 pkg install git -y 
 pkg install python -y 
-git clone https://github.com/TheSpeedX/TBomb.git
-cd TBomb
-./TBomb.sh
+git clone https://github.com/Jaikant00/SpamX.git
+cd SpamX
+./SpamX.sh
 ```
 
 #### For iSH
